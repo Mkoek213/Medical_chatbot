@@ -1,10 +1,12 @@
 import os
 
+import dotenv
 from langchain_pinecone import PineconeVectorStore
 from pinecone import Pinecone, ServerlessSpec
 
 from src.helper import download_embeddings, filter_to_minimal_docs, load_pdf_files, text_split
 
+dotenv.load_dotenv()
 PINECONE_API_KEY = os.getenv("PINECONE_API_KEY")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 
